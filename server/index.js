@@ -13,6 +13,7 @@ dotenv.config();
 app.use(express.json({limit: "30mb",extended: true}))
 app.use(express.urlencoded({limit: "30mb",extended: true}))
 app.use(cors());
+const path = require('path')
 
 app.get('/',(req, res) => {
     res.send("This is a stack overflow clone API")
@@ -22,6 +23,13 @@ app.use ('/user', userRoutes)
 app.use ('/questions', questionRoutes)
 app.use('/answer', answerRoutes)
 mongoose.set('strictQuery', false);
+
+app.use(express.static(path.join(__dirname, "./client/build")));
+
+app.get("*", function(req, res){
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+        
+});
 
 const PORT = process.env.PORT || 5000
 
