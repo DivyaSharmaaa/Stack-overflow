@@ -25,7 +25,7 @@ app.use ('/questions', questionRoutes)
 app.use('/answer', answerRoutes)
 app.use(express.static(path.join(__dirname, './client/build')));
 app.get('*', function(req,res){
-    res.sendFile((path.join(__dirname, './client/build/index.html'));
+    res.sendFile(path.join(__dirname, './client/build/index.html'));
 });
 
 mongoose.set('strictQuery', false);
