@@ -25,7 +25,7 @@ app.use('/answer', answerRoutes)
 mongoose.set('strictQuery', false);
 
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || https://stackoverflow-clone-api-1y93.onrender.com
 
 const DATABASE_URL = process.env.CONNECTION_URL
 
