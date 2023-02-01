@@ -15,6 +15,7 @@ import { setCurrentUser } from '../../actions/currentUser.js'
 const Navbar = () => {
   const dispatch = useDispatch()
     var User = useSelector((state) => (state.currentUserReducer))
+    console.log(User)
     const navigate = useNavigate()
     const handleLogout = () => {
         dispatch({ type: 'LOGOUT'});
