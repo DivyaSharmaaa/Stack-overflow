@@ -10,7 +10,7 @@ export const getAllUsers = async (req, res) => {
         })
         res.status(200).json(allUsersDetails);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        res.status(404).json({ message: error.message });
     }
 }
 export const updateProfile = async (req, res) => {
