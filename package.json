@@ -146,7 +146,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "nodemon index.js",
-    "dev": "concurrently \"npm start\" \"npm run client\""
+   
   },
   "author": "\"Divya Sharma\"",
   "license": "ISC"
