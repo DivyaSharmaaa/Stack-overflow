@@ -2,8 +2,13 @@ import express  from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv'
+import * as path from 'path'
 
 
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 import userRoutes from './routes/users.js'
 import questionRoutes from './routes/Questions.js'
